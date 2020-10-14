@@ -175,6 +175,7 @@ ul {
   font-size: 16px; 
   font-weight: normal;
   white-space: nowrap;
+  z-index: 500;
 }
 
 .nav-box:hover {
