@@ -1,0 +1,340 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #131d34;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.mainHead {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color:#fff;
+  position: fixed;
+  z-index: 400;
+  box-shadow: 0 0 1px 0 rgba(48, 48, 48, 0.5);
+}
+
+.header-left {
+  margin-left: 21px;
+}
+
+.title-logo {
+  height: 70px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+} 
+
+.sub-title {
+  margin-left: 16px;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: #131d34;
+  font-weight: 900;
+}
+
+.sub-title strong {
+  font-size: 1.8rem;
+}
+
+.header-right {
+  display: flex;
+}
+
+/* ナビゲーションメニュー */
+.header-nav {
+  font-size: 0;
+}
+
+.header-nav .nav-box {
+  text-align: center;
+  background-color:#fff;
+  display: inline-block;
+  position: relative;
+  transition: .3S;
+}
+
+.nav-box a {
+  color: #131d34;
+  height: 70px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px 0px 15px;
+}
+
+.menus {
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  background-color:#e9f8fb; 
+  visibility: hidden;
+  opacity: 0;
+  transition: .2s ease-in;
+  font-size: 16px; 
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.nav-box:hover {
+  background-color: #d4f1f8;
+}
+
+.nav-box:hover .menus{  /*マウスオーバー時*/
+  visibility: visible;
+  top: 70px;
+  opacity: 1;
+  position: absolute;
+}
+
+.sub-menu {
+  width: 100%;
+}
+
+.sub-menu a {
+  height: auto;
+  padding: 15px 60px 15px 15px;
+}
+
+.sub-menu:hover a {  /*マウスオーバー時*/
+  color: #2498b3;
+  background-color: #fff;
+}
+
+/* お問い合わせ */
+.form {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px 0px 15px;
+  color: #fff;
+  background-color: #2498b3;
+}
+
+article {
+  padding-top: 70px;
+  }
+
+/* レイヤー（トップ背景） */
+.top-Head {
+  position: relative;
+  height: 650px;
+  overflow: hidden;
+  background-image: url("images/bg-hero3.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 100;
+}
+
+.topHeadLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.top-Head-layer1 {
+  background-image: url("images/bg-hero1.png");
+  background-position: center;
+  text-align: center;
+  padding-top: 80px;
+  z-index: 300;
+}
+
+.top-Head-layer2 {
+  background-image: url("images/bg-hero2.png");
+  background-position: center;
+  z-index: 200;
+}
+
+
+/* トップヘッド */
+.topHead-body {
+  display: inline-block;
+  max-width: 530px;
+  border-radius: 10px;
+  padding: 43px 40px 19px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.topHead-body p {
+  margin-top: 0.95em;
+  margin-left: 0;
+  margin-bottom: 0.5em;
+  margin-right: 0; 
+  line-height: 1.6;
+}
+
+.topHead-title {
+  display: inline-block;
+}
+
+.topHead-title img {
+  width: 280px;
+  height: auto;
+}
+
+.topHead-body a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.8rem;
+  background-color: #2498b3;
+  padding: 24px 37px;
+  border: solid 1px #2498b3;
+  border-radius: 4px;
+  margin-top: 0.75em;
+  line-height: 1;
+}
+
+.wrapper-black {
+  background-color: #000;
+  padding-bottom: 64px;
+}
+
+.recomendations {
+  margin-top: -215px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 400;
+}
+
+.recomendation-info {
+  margin: 0 50px;
+  width: 229px;
+}
+
+.recomendation-titile {
+  text-align: center;
+}
+
+.recomendation-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto;
+  color: #000;
+  border: solid 6px #000;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 100px;
+}
+
+.recomendation-titile p {
+  margin: 0.2em 0 0;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.recomendation-body p {
+  margin: 0.5em 0 0;
+  line-height: 1.7;
+  font-weight: 700;
+  color: #fff;
+}
