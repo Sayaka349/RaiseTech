@@ -1,0 +1,213 @@
+@media screen and (max-width: 1200px){
+    .mainHead {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      background-color:#fff;
+      position: fixed;
+      z-index: 600;
+    }
+
+    .header-left {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .title-logo {
+      height: 50px;
+      display: flex;
+      align-content: center;
+      align-items: center;
+    }
+
+    .sub-title {
+      height: 50px;
+      visibility: collapse;
+    }
+
+    .title-logo img {
+      height: 30px;
+      width: auto;
+    }
+
+    /* ハンバーガー */
+    #nav-drawer {
+      position: relative;
+    }
+    
+    .nav-unshown {
+      display:none;
+    }
+
+    #nav-drawer {
+      margin-top: 10px;
+    }
+    
+    #nav-open {
+      display: inline-block;
+      width: 30px;
+      height: 22px;
+      vertical-align: middle;
+    }
+    
+    #nav-open span, #nav-open span:before, #nav-open span:after {
+      position: absolute;
+      height: 3px;/*線の太さ*/
+      width: 25px;/*長さ*/
+      border-radius: 3px;
+      background: #555;
+      display: block;
+      content: '';
+      cursor: pointer;
+    }
+    #nav-open span:before {
+      bottom: -8px;
+    }
+    #nav-open span:after {
+      bottom: -16px;
+    }
+
+    .header-right {
+      background-color:#fff;         
+      position: absolute;
+      top: 50px;
+      width: 100%;
+    }
+
+    .nav-box {
+      position: relative;    /*アイコン用 */
+    }
+
+    .m1::after {
+      box-sizing: border-box;
+      content: "\f067";
+      display: block;
+      font-family: "Font Awesome 5 Free";
+      width: 50px;
+      height: auto;
+      padding: 10px 20px;
+      position: absolute;
+      right: 0;
+      top: 0px; 
+    }
+
+    .m1:hover::after {
+      content: '\f068';
+    }
+
+    .m3::after {
+      box-sizing: border-box;
+      content: "\f067";
+      display: block;
+      font-family: "Font Awesome 5 Free";
+      width: 50px;
+      height: auto;
+      padding: 10px 20px;
+      position: absolute;
+      right: 0;
+      top: 0px; 
+    }
+
+    .m3:hover::after {
+      content: '\f068';
+    }
+
+    .m5::after {
+      box-sizing: border-box;
+      content: "\f067";
+      display: block;
+      font-family: "Font Awesome 5 Free";
+      width: 50px;
+      height: auto;
+      padding: 10px 20px;
+      position: absolute;
+      right: 0;
+      top: 0px; 
+    }
+
+    .m5:hover::after {
+      content: '\f068';
+    }
+
+    .nav-box a {
+      color: #131d34;
+      height: 45.6px;
+      font-size: 16px;
+      display: block;
+      align-items: center;
+      padding: 10px;
+     
+    }
+    .header-right a:hover {
+      background-color: #e9f8fb;
+    }
+
+    .sub-menu a {
+      font-weight: normal;
+      padding: 10px 25px;
+    }
+
+    .m2 {
+      border: 1px;
+      height: 0;
+      opacity: 0;
+      transition: .3s;
+      visibility: hidden;
+    }
+
+    .m1:hover .m2 {
+      height: 40px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .m4 {
+      border: 1px;
+      height: 0;
+      opacity: 0;
+      transition: .3s;
+      visibility: hidden;
+    }
+
+    .m3:hover .m4 {
+      height: 40px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .m6 {
+      border: 0.5px;
+      height: 0;
+      opacity: 0;
+      transition: .3s;
+      visibility: hidden;
+    }
+
+    .m5:hover .m6 {
+      height: 40px;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* .header-right {
+      height: 0;
+      opacity: 0;
+      transition: .3s;
+      visibility: hidden;
+    }
+
+    #nav-drawer:hover .nav-box {
+      height: 40px;
+      opacity: 1;
+      visibility: visible;
+    } */
+
+    .form {
+      display: none;
+    }
+
+    article {
+      padding-top: 50px;
+    }
+} 
