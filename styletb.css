@@ -31,17 +31,20 @@
       width: auto;
     }
 
-    /* ハンバーガー */
-    #nav-drawer {
-      position: relative;
+    .header-link {
+      width: 50px;
+      height: 50px;
+      display: flex;
     }
+
+    /* ハンバーガー */
     
     .nav-unshown {
       display:none;
     }
 
     #nav-drawer {
-      margin-top: 10px;
+      margin: 10px 5px;
     }
     
     #nav-open {
@@ -49,85 +52,162 @@
       width: 30px;
       height: 22px;
       vertical-align: middle;
-    }
-    
-    #nav-open span, #nav-open span:before, #nav-open span:after {
-      position: absolute;
-      height: 3px;/*線の太さ*/
-      width: 25px;/*長さ*/
-      border-radius: 3px;
-      background: #555;
-      display: block;
-      content: '';
       cursor: pointer;
     }
-    #nav-open span:before {
-      bottom: -8px;
+    
+    #nav-open span {
+      position: absolute;
+      height: 1px;/*線の太さ*/
+      width: 23px;/*長さ*/
+      background: #2498b3;
+      display: block;
+      content: '';
     }
+
+    #nav-open span:before{
+      position: absolute;
+      height: 2px;/*線の太さ*/
+      width: 23px;/*長さ*/
+      background: #2498b3;
+      display: block;
+      content: '';
+      bottom: -9px;
+    }
+
     #nav-open span:after {
-      bottom: -16px;
+      position: absolute;
+      height: 2.5px;/*線の太さ*/
+      width: 23px;/*長さ*/
+      background: #2498b3;
+      display: block;
+      content: '';
+      bottom: -18px;
     }
 
     .header-right {
       background-color:#fff;         
       position: absolute;
       top: 50px;
+      right: 0;
       width: 100%;
+      display: none;
+    }
+
+     #nav-drawer:hover .header-right{
+     display: block;
+    } 
+
+    .header-right:hover .header-right{
+      display: block;
+    } 
+
+   #nav-drawer:hover {
+     background-color: #2498b3;
+     width: 50px;
+     margin: 0;
+   } 
+
+   #nav-drawer:hover #nav-open span {
+      position: absolute;
+      height: 0px;/*線の太さ*/
+      width: 0px;/*長さ*/
+      background: #2498b3;
+      display: block;
+      content: '';
+    }
+
+    #nav-drawer:hover #nav-open span::before{
+      position: absolute;
+      height: 2px;/*線の太さ*/
+      width: 23px;/*長さ*/
+      background: #fff;
+      display: block;
+      content: '';
+      bottom: -25px;
+      right: -37px;
+      transform: rotate(45deg);
+    }
+
+    #nav-drawer:hover #nav-open span:after {
+      position: absolute;
+      height: 2.5px;/*線の太さ*/
+      width: 23px;/*長さ*/
+      background: #fff;
+      display: block;
+      content: '';
+      bottom: -25px;
+      right: -37px;
+      transform: rotate(135deg);
     }
 
     .nav-box {
-      position: relative;    /*アイコン用 */
+      position: relative;    
     }
 
-    .m1::after {
-      box-sizing: border-box;
-      content: "\f067";
-      display: block;
-      font-family: "Font Awesome 5 Free";
-      width: 50px;
-      height: auto;
-      padding: 10px 20px;
+    .nav-box1::before, .m1::after {    /* 縦 */
       position: absolute;
-      right: 0;
-      top: 0px; 
+      top: 22px;
+      right: 2px;
+      content: '';
+      height: 1.5px;
+      width: 22px;
+      background: #131d34;
+      display: block;
+      transform: translateX(-50%);
+    }
+
+    .m1::after {    /* 横 */
+    top: 22px;
+    right: 13px;
+    transform: rotate(90deg);
     }
 
     .m1:hover::after {
-      content: '\f068';
+     display: none;
+    }
+
+    .nav-box3::before, .m3::after {
+      position: absolute;
+      top: 22px;
+      right: 2px;
+      content: '';
+      height: 1.5px;
+      width: 22px;
+      background: #131d34;
+      display: block;
+      transform: translateX(-50%);
     }
 
     .m3::after {
-      box-sizing: border-box;
-      content: "\f067";
-      display: block;
-      font-family: "Font Awesome 5 Free";
-      width: 50px;
-      height: auto;
-      padding: 10px 20px;
-      position: absolute;
-      right: 0;
-      top: 0px; 
+    top: 22px;
+    right: 13px;
+    transform: rotate(90deg);
     }
 
     .m3:hover::after {
-      content: '\f068';
+     display: none;
+    }
+
+    .nav-box5::before, .m5::after {
+      position: absolute;
+      top: 22px;
+      right: 2px;
+      content: '';
+      height: 1.5px;
+      width: 22px;
+      background: #131d34;
+      display: block;
+      transform: translateX(-50%);
     }
 
     .m5::after {
-      box-sizing: border-box;
-      content: "\f067";
-      display: block;
-      font-family: "Font Awesome 5 Free";
-      width: 50px;
-      height: auto;
-      padding: 10px 20px;
-      position: absolute;
-      right: 0;
-      top: 0px; 
+    top: 22px;
+    right: 13px;
+    transform: rotate(90deg);
     }
 
     .m5:hover::after {
-      content: '\f068';
+     display: none;
     }
 
     .nav-box a {
@@ -190,19 +270,6 @@
       visibility: visible;
     }
 
-    /* .header-right {
-      height: 0;
-      opacity: 0;
-      transition: .3s;
-      visibility: hidden;
-    }
-
-    #nav-drawer:hover .nav-box {
-      height: 40px;
-      opacity: 1;
-      visibility: visible;
-    } */
-
     .form {
       display: none;
     }
@@ -210,4 +277,5 @@
     article {
       padding-top: 50px;
     }
+    
 } 
