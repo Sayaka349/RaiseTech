@@ -72,6 +72,7 @@
       display: block;
       content: '';
       bottom: -9px;
+      transition: .3s;
     }
 
     #nav-open span:after {
@@ -82,6 +83,7 @@
       display: block;
       content: '';
       bottom: -18px;
+      transition: .3s;
     }
 
     .header-right {
@@ -107,7 +109,7 @@
      margin: 0;
    } 
 
-   #nav-drawer:hover #nav-open span {
+   #nav-drawer:hover #nav-open span{
       position: absolute;
       height: 0px;/*線の太さ*/
       width: 0px;/*長さ*/
@@ -277,5 +279,4 @@
     article {
       padding-top: 50px;
     }
-    
 } 
