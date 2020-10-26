@@ -39,12 +39,27 @@
 
     /* ハンバーガー */
     
-    .nav-unshown {
-      display:none;
+    label {
+      position: absolute;
+      right: 0;
     }
 
-    #nav-drawer {
-      margin: 10px 5px;
+    .header-nav {
+      display: none;
+    }
+
+    #nav-open {
+      margin-top: 13px;
+      margin-right: 5px;      
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      top: -50vh;
+    }
+
+    input[type="checkbox"]:checked ~.header-nav{
+      display: block;
     }
     
     #nav-open {
@@ -89,27 +104,17 @@
     .header-right {
       background-color:#fff;         
       position: absolute;
-      top: 50px;
-      right: 0;
       width: 100%;
-      display: none;
     }
 
-     #nav-drawer:hover .header-right{
-     display: block;
-    } 
-
-    .header-right:hover .header-right{
-      display: block;
-    } 
-
-   #nav-drawer:hover {
+    input[type="checkbox"]:checked ~#nav-open {
      background-color: #2498b3;
      width: 50px;
+     height: 50px;
      margin: 0;
    } 
 
-   #nav-drawer:hover #nav-open span{
+    input[type="checkbox"]:checked ~#nav-open span{
       position: absolute;
       height: 0px;/*線の太さ*/
       width: 0px;/*長さ*/
@@ -118,7 +123,7 @@
       content: '';
     }
 
-    #nav-drawer:hover #nav-open span::before{
+    input[type="checkbox"]:checked ~#nav-open span::before{
       position: absolute;
       height: 2px;/*線の太さ*/
       width: 23px;/*長さ*/
@@ -130,7 +135,7 @@
       transform: rotate(45deg);
     }
 
-    #nav-drawer:hover #nav-open span:after {
+    input[type="checkbox"]:checked ~#nav-open span:after {
       position: absolute;
       height: 2.5px;/*線の太さ*/
       width: 23px;/*長さ*/
@@ -144,6 +149,10 @@
 
     .nav-box {
       position: relative;    
+    }
+
+    .m1{
+      margin-top: 50px;
     }
 
     .nav-box1::before, .m1::after {    /* 縦 */
